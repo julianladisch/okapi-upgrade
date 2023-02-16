@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: wget --quiet -O - https://repository.folio.org/packages/debian/folio-apt-archive-key.asc | sudo apt-key add 
+    - run: sudo add-apt-repository "deb https://repository.folio.org/packages/ubuntu focal/"
+    - run: sudo apt update
+    - run: apt-get -y --allow-change-held-packages install okapi=4.14.8-1
+    - run: apt-get -y --allow-change-held-packages install okapi=4.14.10
