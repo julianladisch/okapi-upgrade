@@ -8,4 +8,4 @@ jobs:
     - run: sudo add-apt-repository "deb https://repository.folio.org/packages/ubuntu focal/"
     - run: sudo apt update
     - run: sudo apt-get -y --allow-change-held-packages install okapi=4.14.8-1
-    - run: sudo apt-get -y --allow-change-held-packages install okapi=4.14.10
+    - run: sudo apt-get -y --allow-change-held-packages install okapi=4.14.10-1
